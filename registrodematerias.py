@@ -1,0 +1,17 @@
+lista_estudiantes = []
+def registrar_materias():
+    nombre_buscado = input("Nombre del estudiante: ")
+ 
+    for estudiante in lista_estudiantes:
+        if estudiante["nombre"] == nombre_buscado:
+ 
+            while True:
+                nombre_materia = input("Nombre de la materia (o escriba 'fin' para terminar): ")
+ 
+                if nombre_materia == "fin":
+                    break
+ 
+                nota = float(input("Nota obtenida: "))
+                estudiante["materias"].append({"materia": nombre_materia, "nota": nota})
+                print("Materia y nota guardadas")
+ 
